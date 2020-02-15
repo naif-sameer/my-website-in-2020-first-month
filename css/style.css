@@ -1,0 +1,362 @@
+*{box-sizing: border-box;outline: none}
+
+body{
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+nav{
+  background-color: #444;
+}
+nav .container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 16px;
+  width: 100%
+}
+.nav-logo{
+  min-width: 4%;
+  padding: 16px
+}
+.nav-berger{
+  width: 44px;
+  padding: 10px 0
+}
+.nav-berger div{
+  width: 100%;
+  height: 5px;
+  background-color: #222;
+  border-radius: 10px;
+  transition: background .5s lniear;
+}
+.nav-berger div:not(:last-of-type){
+  margin-bottom: 7px
+}
+.nav-berger:hover div{
+  background-color: #111
+}
+.is-hide{
+  display: none;
+}
+.nav-links{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 51px;
+  background-color: #222;
+}
+.nav-links button{
+  position: absolute;
+  top: 8px;
+  right: 50px;
+  font-size: 2em;
+  font-weight: 900;
+  background-color: transparent;
+  border: none;
+
+}
+.nav-links ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.nav-links li{
+  padding: 16px 10px;
+  transition: all .2s linear;
+}
+.nav-links li:hover{
+  background-color: #eee;
+  color: #222;
+  cursor: pointer;
+}
+.header-main{
+  background-color: #aaa;
+}
+.header-main .container{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.header-main .header-words{
+  flex-basis: 40%;
+  padding: 34px 0;
+  order: 1;
+}
+.header-words h1{
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-top: 0;
+}
+.header-main-image{
+  flex-basis: 50%;
+  order: 2
+}
+.header-main-image img{
+  max-width: 100%
+}
+.header-main p{
+  width: 80%;
+  color: #000;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.header-main button{
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid rgba(68, 68, 68, 0.58);
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+.header-main button:hover{
+  border-color: #333;
+  color: #fff;
+  background-color: #111
+}
+/**************************************/
+main > .container{
+  padding: 20px 10px;
+}
+main{
+  background-color: #444;
+  color: #eee
+}
+.blog{
+  text-align: center;
+  padding-top: 20px
+}
+.blog h2{
+  font-size: 28px;
+  color: #ddd;
+  margin-top: 0
+}
+.blog-image{
+  border: 1px solid #111;
+  width: 96%;
+  margin: auto;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.blog-image img{
+  width: 100%;
+  transition: opacity 0.5s linear;
+}
+.blog-image img:hover{
+  opacity: .4;
+  cursor: zoom-in
+}
+.blog-image p{
+  max-width: 100%;
+  line-height: 1.5
+}
+.blog-image button{
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 2px solid #aaa;
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+.blog-image button:hover{
+  border-color: #333;
+  color: #fff;
+  background-color: #111
+}
+.services{
+  text-align: center;
+  background-color: #333;
+  padding-top: 20px
+}
+.services h2{
+  margin: 0;
+  font-size: 28px;
+}
+.services .container{
+  padding: 0 10px;
+}
+.services-service{
+  position: relative;
+  padding: 25px 0;
+}
+.services-service:not(:last-of-type)::after{
+  content: "";
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  bottom: 0;
+  border-bottom: 2px solid #000;
+}
+.services-service section{
+  display: flex;
+  width: 80%;
+  margin: auto
+}
+.service-icon img{
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.services-service p{
+  width: 80%;
+  margin: auto;
+  line-height: 1.5
+}
+.contact{
+  text-align: center;
+  padding: 20px 20px 0
+}
+.contact h2{
+  margin: 0;
+  font-size: 28px;
+}
+.contact form{
+  display: flex;
+  flex-direction: column
+}
+.contact input{
+  margin: 10px 0 0;
+  padding: 10px;
+  border-radius: 20px
+}
+input:focus,
+textarea:focus{
+  border-color: red
+}
+.contact textarea{
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  max-width: 100%;
+  height: 170px;
+  resize: none;
+}
+.contact button{
+  background-color: transparent;
+  border: 2px solid #aaa;
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  transition: all .5s linear;
+  cursor: pointer;
+  width: 100px;
+  margin: 19px auto;
+}
+.contact button:hover{
+  border-color: #333;
+  color: #fff;
+  background-color: #111
+}
+/*******/
+@media (min-width: 400px){
+  .blog-image{
+    width: 90%
+  }.blog-image img{
+    width: 100%
+  }
+}
+@media (min-width: 768px){
+  .header-main .container{
+    padding: 0 20px
+
+  }
+  .blog .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+  }
+  .blog .container h2{
+    flex-basis: 100%;
+  }
+  .blog-image{
+    flex-basis: 48%;
+    text-align: left;
+  }
+  .blog-image p{
+    margin-left: 20px
+  }
+  .blog-image button{
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .contact .container{
+    width: 70%;
+    margin: auto
+  }
+  .services .container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .services section{
+    justify-content: left;
+  }
+  .service-icon{
+    margin-right: 20px
+  }
+  .services .container h2{
+    flex-basis: 100%;
+  }
+  .services-service{
+    flex-basis: 48%;
+    text-align: left;
+  }
+  .services-service:last-of-type::after,
+  .services-service:nth-of-type(3)::after{
+    border: none;
+  }
+}
+@media (max-width: 767px){
+  .header-main .container{
+    display: block
+  }
+  .header-main-image img{
+    max-width: 90%
+  }
+}
+@media (min-width: 992px){
+  .nav-links{
+    width: 30%;
+    z-index: 1;
+  }
+  .blog-image{
+    flex-basis: 32%
+  }
+  .contact .container{
+    width: 50%
+  }
+  .container{
+    max-width: 1024px;
+    margin: auto
+  }
+}
+/*********************************************************/
+footer{
+  text-align: center;
+  background-color: #333;
+  color: #eee;
+}
+footer h4{
+  margin: 0;
+  padding: 20px 0
+}
